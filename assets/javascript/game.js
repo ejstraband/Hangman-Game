@@ -6,6 +6,8 @@ var secretWordLength = secretWord.length;
 var wrongGuesses = [];
 var userSuccesses = [];
 var currentWord = [];
+var currentGuess = null;
+var masterGuesses = [];
 var guessesRemaining = 0;
 var wins = 0;
 var losses = 0;
@@ -36,34 +38,59 @@ function appStart() {
 	alert("Let's Get Started! Push a key to start guessing.");
 }
 
+function isLetter() {
+	if ((event.keyCode >= 65 && event.keyCode <= 90) || (event.keyCode >= 97 && event.keyCode <= 122)) {
+		console.log("user typed " + currentGuess + ". This is a valid choice.");
+		letterMatch(currentGuess);
+	} 	else {
+    alert("Not a letter. Please pick again.")
+	}
+}
+
 function letterMatch() {
-	
+	if ((secretWord.indexOf(currentGuess)) !== -1) {
+		console.log(currentGuess + " is one of the letters.")
+    } else {
+      	console.log(currentGuess + " is NOT one of the letters.")
+      	wrongGuesses.push(currentGuess);
+      	htmlWrongGuesses.innerHTML = wrongGuesses;
+    }
+}
+
+function currentWordBlanks() {
+	for (var i = 0; i < secretWordLength; i++) {
+		currentWord.push(" _ ");
+		htmlCurrentWord.innerHTML = currentWord;
+      }
 }
 
 appSetup();
 appStart();
-
+currentWordBlanks();
 // main function
-document.onkeyup = function(event) {
+document.onkeyup = function(userGuess) {
 	// capture the user guess
-	var userGuesses = event.key;
-	// while you have guesses remaining
-	if (guessesRemaining > 1) {
-		currentWord.push(userGuesses);
-		console.log(currentWord);
-		console.log(userGuesses);
-		guessesRemaining = (guessesRemaining - 1);
-		console.log("Guesses Remaining: " + guessesRemaining);
-		htmlWrongGuesses = wrongGuesses;
-		htmlGuessesRemaining.innerHTML = guessesRemaining;
-	} else {
-		htmlGuessesRemaining.innerHTML = "none";
-		losses++;
-		htmlLosses.innerHTML = losses;
-		console.log("You Lose!");
-		alert("You Lose!");
-		appSetup();
-		appStart();
-	}
-
+	currentGuess = userGuess.key;
+	isLetter(currentGuess);
 }
+
+	// while you have guesses remaining
+
+// 	if ((guessesRemaining > 1)) {
+// 		currentWord.push(userGuesses);
+// 		console.log(currentWord);
+// 		console.log(userGuesses);
+// 		guessesRemaining = (guessesRemaining - 1);
+// 		console.log("Guesses Remaining: " + guessesRemaining);
+// 		htmlWrongGuesses = wrongGuesses;
+// 		htmlGuessesRemaining.innerHTML = guessesRemaining;
+// 	} else {
+// 		htmlGuessesRemaining.innerHTML = "none";
+// 		losses++;
+// 		htmlLosses.innerHTML = losses;
+// 		console.log("You Lose!");
+// 		alert("You Lose!");
+// 		appSetup();
+// 		appStart();
+// 	}
+// }
