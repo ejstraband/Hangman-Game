@@ -1,5 +1,5 @@
 // this is a comment from coda
-
+// this is a comment from the mac. 11:00 AM:
 
 // variables for the javascript.
 var secretWord = "";
