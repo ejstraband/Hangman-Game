@@ -1,3 +1,5 @@
+// this is a comment from coda
+
 
 // variables for the javascript.
 var secretWord = "";
