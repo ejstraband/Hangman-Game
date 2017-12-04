@@ -20,6 +20,8 @@ var htmlGuessesRemaining = document.getElementById('guessesRemaining');
 var htmlWrongGuesses = document.getElementById('wrongGuesses');
 
 
+console.log("Initial Declaration of GuessesRemaining (should be Zero): " + guessesRemaining);
+
 // defines the word bank, picks the secret word, resets guesses, blanks user's current word
 function appSetup() {
 	var wordBank = ["amigos", "cactus", "eastwood", "gunfight", "locomotive", "mesas", "noose", "poker", "ranch", "saloon", "stagecoach", "tombstone", "wanted", "westworld"];
@@ -28,60 +30,54 @@ function appSetup() {
 	secretWordLength = secretWord.length;
 	guessesRemaining = 13
 	currentWordBlanks();
-	console.log("Reset of GuessesRemaining (should be 13): " + guessesRemaining);
+	console.log("Reset of GuessesRemaining (should be 13): " + guessesRemaining);	
+}
+
+function appStart() {
 	console.log("The secret word is " + secretWord);
 	console.log("The secret word is " + secretWordLength + " letters long.")
 	alert("Let's Get Started! Push a key to start guessing.");
-	}
-
-function currentWordBlanks() {
-	for (var i = 0; i < secretWordLength; i++) {
-		currentWord.push(" _ ");
-		htmlCurrentWord.innerHTML = currentWord;
-    	}
-	}
-
-function userGuessCapture() {
-	document.onkeyup = function(userGuess) {
-	// capture the user guess
-		currentGuess = userGuess.key;
-		isLetter(currentGuess);
-		}
-	}
+}
 
 function isLetter() {
 	if ((event.keyCode >= 65 && event.keyCode <= 90) || (event.keyCode >= 97 && event.keyCode <= 122)) {
 		console.log("user typed " + currentGuess + ". This is a valid choice.");
 		letterMatch(currentGuess);
-		} else {
-	    alert("Not a letter. Please pick again.")
-		}
+	} 	else {
+    alert("Not a letter. Please pick again.")
 	}
+}
 
 function letterMatch() {
 	if ((secretWord.indexOf(currentGuess)) !== -1) {
 		console.log(currentGuess + " is one of the letters.")
-		} else {
+    } else {
       	console.log(currentGuess + " is NOT one of the letters.")
       	wrongGuesses.push(currentGuess);
       	htmlWrongGuesses.innerHTML = wrongGuesses;
-		}
-	}
+    }
+}
 
-// main function primary logic
+function currentWordBlanks() {
+	for (var i = 0; i < secretWordLength; i++) {
+		currentWord.push(" _ ");
+		htmlCurrentWord.innerHTML = currentWord;
+      }
+}
 
-console.log("Initial Declaration of GuessesRemaining (should be Zero): " + guessesRemaining);
+
+
 appSetup();
+appStart();
 
-	// If my solution === secret word
-		// win
-	// else
-		// if guesses > 0
-			//guess
-		//else
-			//lose
+// main function
+document.onkeyup = function(userGuess) {
+	// capture the user guess
+	currentGuess = userGuess.key;
+	isLetter(currentGuess);
+}
 
-
+	// while you have guesses remaining
 
 // 	if ((guessesRemaining > 1)) {
 // 		currentWord.push(userGuesses);

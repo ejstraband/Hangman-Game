@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="6F9F1AE6-C9CC-4E1A-963D-8F4DA8D6D090">
+    <Notes>
+        <Note ID="1" FontSize="12.0" Position="1121.0,47.0" Width="69.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>mySoution </String>
+            <ConnectedNoteIDs>3-4, 19, 21-22</ConnectedNoteIDs>
+            <PointsToNoteIDs>3-4</PointsToNoteIDs>
+        </Note>
+        <Note ID="2" FontSize="12.0" Position="1424.828125,72.371094" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Win!</String>
+            <ConnectedNoteIDs>3, 20</ConnectedNoteIDs>
+            <PointsToNoteIDs>20</PointsToNoteIDs>
+        </Note>
+        <Note ID="3" FontSize="12.0" Position="1219.917969,51.476562" Width="94.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>=== secretWord</String>
+            <ConnectedNoteIDs>1-2</ConnectedNoteIDs>
+            <PointsToNoteIDs>2</PointsToNoteIDs>
+        </Note>
+        <Note ID="4" FontSize="12.0" Position="1067.835938,198.234375" Width="88.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>else if guesses</String>
+            <ConnectedNoteIDs>1, 5, 7</ConnectedNoteIDs>
+            <PointsToNoteIDs>5, 7</PointsToNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="996.0,259.0" Width="29.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String> &gt; 0</String>
+            <ConnectedNoteIDs>4, 6</ConnectedNoteIDs>
+            <PointsToNoteIDs>6</PointsToNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="936.65625,297.570312" Width="41.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>guess</String>
+            <ConnectedNoteIDs>5, 9-11</ConnectedNoteIDs>
+            <PointsToNoteIDs>9-10</PointsToNoteIDs>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="1155.226562,245.507812" Width="20.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>0</String>
+            <ConnectedNoteIDs>4, 8</ConnectedNoteIDs>
+            <PointsToNoteIDs>8</PointsToNoteIDs>
+        </Note>
+        <Note ID="8" FontSize="12.0" Position="1191.046875,275.816406" Width="35.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Lose</String>
+            <ConnectedNoteIDs>7, 18</ConnectedNoteIDs>
+            <PointsToNoteIDs>18</PointsToNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="808.824219,378.453125" Width="45.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>if letter</String>
+            <ConnectedNoteIDs>6, 15</ConnectedNoteIDs>
+            <PointsToNoteIDs>15</PointsToNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="12.0" Position="920.779684,397.329812" Width="55.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>not letter</String>
+            <ConnectedNoteIDs>6, 11</ConnectedNoteIDs>
+            <PointsToNoteIDs>11</PointsToNoteIDs>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="1029.225759,384.484169" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>alert</String>
+            <ConnectedNoteIDs>6, 10</ConnectedNoteIDs>
+            <PointsToNoteIDs>6</PointsToNoteIDs>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="617.648438,378.351562" Width="110.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>in the secret word?</String>
+            <ConnectedNoteIDs>9, 16-17</ConnectedNoteIDs>
+            <PointsToNoteIDs>16-17</PointsToNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="505.617188,277.507812" Width="55.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>matched
+</String>
+            <ConnectedNoteIDs>15, 22</ConnectedNoteIDs>
+            <PointsToNoteIDs>22</PointsToNoteIDs>
+        </Note>
+        <Note ID="17" FontSize="12.0" Position="570.546875,111.277344" Width="75.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>not matched</String>
+            <ConnectedNoteIDs>15, 21</ConnectedNoteIDs>
+            <PointsToNoteIDs>21</PointsToNoteIDs>
+        </Note>
+        <Note ID="18" FontSize="12.0" Position="1244.21875,309.277344" Width="53.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>add loss</String>
+            <ConnectedNoteIDs>8, 19</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+        <Note ID="19" FontSize="12.0" Position="1399.320312,239.980469" Width="40.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Reset</String>
+            <ConnectedNoteIDs>1, 18, 20</ConnectedNoteIDs>
+            <PointsToNoteIDs>1</PointsToNoteIDs>
+        </Note>
+        <Note ID="20" FontSize="12.0" Position="1531.457031,149.371094" Width="54.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Add Win</String>
+            <ConnectedNoteIDs>2, 19</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="684.757812,21.609375" Width="130.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>-1 Guess
+Add to Failed Guesses Array
+Sort Failed Guesses
+Add to html</String>
+            <ConnectedNoteIDs>1, 17</ConnectedNoteIDs>
+            <PointsToNoteIDs>1</PointsToNoteIDs>
+        </Note>
+        <Note ID="22" FontSize="12.0" Position="764.0,188.0" Width="113.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Update My Solution
+add to html</String>
+            <ConnectedNoteIDs>1, 16</ConnectedNoteIDs>
+            <PointsToNoteIDs>1</PointsToNoteIDs>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>1-11, 15-20, 22</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="C4F5F473-A518-418F-9BE5-FE3D23D1EF35" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.561855 0.71062 0.779401</BorderColor>
+            <FillColor>0.702319 0.888276 0.974252</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="F957F77C-DF8C-4DFB-9E6C-224FCE0AEF0B" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.572684 0.758969 0.558154</BorderColor>
+            <FillColor>0.715855 0.948712 0.697692</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="2E1600B2-E142-4EFD-8807-1DFDD4B57B75" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.957566 0.766747 0.999616</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="7854C9B1-24D7-4686-B757-8D40F4699FF3" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.993495 0.701207 0.732587</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="13771CE0-B056-43D6-94DE-993A1A1382B7" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.798177 0.714184 0.522055</BorderColor>
+            <FillColor>0.997722 0.89273 0.652569</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="EC79EFA0-83EF-4B63-A0A2-7586E18E2F3A" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="EC5D7925-6D90-48C8-B13F-3AE9D2E89209" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999767 0.98837 0.949907</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+    </UISettings>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>
