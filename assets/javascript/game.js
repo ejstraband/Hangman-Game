@@ -36,7 +36,8 @@ function appSetup() {
     htmlWrongGuessLetters.innerHTML = wrongGuessLetters;
 	console.log("Writing out the blank wrong guesses to the HTML page.")
 	correctGuessLetters = [];
-	console.log("Blanking out last round's correct guesses array.")
+	currentUserWord = "";
+	console.log("Blanking out last round's correct guesses  and word.")
 	
 	// make a secret word long dash word
 	for (var i = 0; i < secretWord.length; i++) { (currentUserWord = currentUserWord + "-") ; }
@@ -110,16 +111,22 @@ function updateCurrentWord(currentGuess) {
 
 function winChecker() {
 	if (currentUserWord === secretWord) {
-		wins = (wins + 1);
-		htmlWins.innerHTML = wins
-		alert("You Win!");
+		return true;
 		}
+	}
+
+function win() {
+	wins = (wins + 1);
+	htmlWins.innerHTML = wins
+	alert("You Win!");
+	appSetup();
 	}
 
 function lose() {
     losses = (losses + 1);
 	htmlLosses.innerHTML = losses
 	alert("You Lost!");
+	appSetup();
 	}
 
 // =================================
@@ -188,7 +195,13 @@ document.onkeyup = function(currentKeypress) {
 			if (guessChecker(currentGuess)) {
 				console.log(currentGuess + " is a match!");
 				updateCurrentWord(currentGuess);
-
+				
+				// function 4: Check for a "win" condition
+				if (winChecker()) {
+					win();
+				} else {
+					alert("Letter Matched. Please guess again.")
+				}
 
 			// function 3 else condition (third-to-last condition in program)
 			} else {
