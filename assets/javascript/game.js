@@ -170,13 +170,22 @@ document.onkeyup = function(currentGuess) {
 		} else {
 			console.log("Checked " + currentGuess + ". This is a new guess.");
 
-			// function 3 guessChecker
-			if (guessChecker(currentGuess)) {
-				correctGuess(currentGuess);
-			// function 3 else condition
-			} else {
+			// function 3 parent condition
+
+			// function 3 loop
+			for (var i = 0; i<secretWord.length; i++) {
+				// function 3 matcher
+				if(secretWord[i]===currentGuess) {
+					currentUserWordArray[i]=currentGuess;
+					currentUserWord = secretWordArray.join("");
+					htmlcurrentUserWord.innerHTML = currentUserWord;
+					alert("Good Match. Please pick again.");
+				// function 3 else condition
+				} else {
 				incorrectGuess(currentGuess);
+				}
 			}
+
 		}
 
 	// Function 1 else condition
