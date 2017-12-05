@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="00997F15-8BEA-4850-9BFF-1706F5A206F0">
+    <Notes>
+        <Note ID="19" FontSize="12.0" Position="586.0,137.0" Width="129.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="5" Style="Jagged"></Border>
+            </Appearance>
+            <String>EVENT: userPressKey</String>
+            <ConnectedNoteIDs>21, 24, 29-30, 39-40, 45-46</ConnectedNoteIDs>
+            <PointsToNoteIDs>21</PointsToNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="613.0,341.0" Width="82.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>function: 
+entryValidator
+
+userGuess</String>
+            <ConnectedNoteIDs>19, 22-23</ConnectedNoteIDs>
+            <PointsToNoteIDs>22-23</PointsToNoteIDs>
+        </Note>
+        <Note ID="22" FontSize="12.0" Position="550.0,302.0" Width="29.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>true</String>
+            <ConnectedNoteIDs>21, 26</ConnectedNoteIDs>
+            <PointsToNoteIDs>26</PointsToNoteIDs>
+        </Note>
+        <Note ID="23" FontSize="12.0" Position="718.0,269.0" Width="34.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>false</String>
+            <ConnectedNoteIDs>21, 24</ConnectedNoteIDs>
+            <PointsToNoteIDs>24</PointsToNoteIDs>
+        </Note>
+        <Note ID="24" FontSize="12.0" Position="734.0,188.0" Width="71.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Cloud"></Border>
+            </Appearance>
+            <String>Alerts:
+Not a Letter
+Pick Again</String>
+            <ConnectedNoteIDs>19, 23</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+        <Note ID="26" FontSize="12.0" Position="375.0,284.0" Width="99.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>function:
+newGuessCheck</String>
+            <ConnectedNoteIDs>22, 27-28</ConnectedNoteIDs>
+            <PointsToNoteIDs>27-28</PointsToNoteIDs>
+        </Note>
+        <Note ID="27" FontSize="12.0" Position="311.0,232.0" Width="29.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>true</String>
+            <ConnectedNoteIDs>26, 29</ConnectedNoteIDs>
+            <PointsToNoteIDs>29</PointsToNoteIDs>
+        </Note>
+        <Note ID="28" FontSize="12.0" Position="456.0,340.0" Width="34.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>false</String>
+            <ConnectedNoteIDs>26, 31</ConnectedNoteIDs>
+            <PointsToNoteIDs>31</PointsToNoteIDs>
+        </Note>
+        <Note ID="29" FontSize="12.0" Position="371.511719,149.09375" Width="134.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Cloud"></Border>
+            </Appearance>
+            <String>Alerts:
+Letter Already Guessed
+Please Pick Again</String>
+            <ConnectedNoteIDs>19, 27</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+        <Note ID="30" FontSize="12.0" Position="626.0,41.0" Width="54.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>function:
+appStart</String>
+            <ConnectedNoteIDs>19</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+        <Note ID="31" FontSize="12.0" Position="351.0,383.0" Width="85.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>function:
+guessChecker</String>
+            <ConnectedNoteIDs>28, 32, 34</ConnectedNoteIDs>
+            <PointsToNoteIDs>32, 34</PointsToNoteIDs>
+        </Note>
+        <Note ID="32" FontSize="12.0" Position="210.0,263.0" Width="34.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>false</String>
+            <ConnectedNoteIDs>31, 33</ConnectedNoteIDs>
+            <PointsToNoteIDs>33</PointsToNoteIDs>
+        </Note>
+        <Note ID="33" FontSize="12.0" Position="78.0,113.0" Width="119.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Function:
+incorrectGuess</String>
+            <ConnectedNoteIDs>32, 41-42</ConnectedNoteIDs>
+            <PointsToNoteIDs>41-42</PointsToNoteIDs>
+        </Note>
+        <Note ID="34" FontSize="12.0" Position="464.0,468.0" Width="33.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>True</String>
+            <ConnectedNoteIDs>31, 35</ConnectedNoteIDs>
+            <PointsToNoteIDs>35</PointsToNoteIDs>
+        </Note>
+        <Note ID="35" FontSize="12.0" Position="685.0,455.0" Width="80.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>function:
+correctGuess</String>
+            <ConnectedNoteIDs>34, 43-44</ConnectedNoteIDs>
+            <PointsToNoteIDs>43-44</PointsToNoteIDs>
+        </Note>
+        <Note ID="39" FontSize="12.0" Position="353.0,23.0" Width="105.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Cloud"></Border>
+            </Appearance>
+            <String>Alerts:
+Not a Match
+Please Pick Again</String>
+            <ConnectedNoteIDs>19, 42</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+        <Note ID="40" FontSize="12.0" Position="370.0,96.0" Width="58.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Cloud"></Border>
+            </Appearance>
+            <String>Alerts:
+You Lose</String>
+            <ConnectedNoteIDs>19, 41</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+        <Note ID="41" FontSize="12.0" Position="233.0,117.0" Width="85.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>LoseCondition</String>
+            <ConnectedNoteIDs>33, 40</ConnectedNoteIDs>
+            <PointsToNoteIDs>40</PointsToNoteIDs>
+        </Note>
+        <Note ID="42" FontSize="12.0" Position="220.0,45.0" Width="102.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>notLoseCondition</String>
+            <ConnectedNoteIDs>33, 39</ConnectedNoteIDs>
+            <PointsToNoteIDs>39</PointsToNoteIDs>
+        </Note>
+        <Note ID="43" FontSize="12.0" Position="817.0,455.0" Width="77.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>winCondition</String>
+            <ConnectedNoteIDs>35, 46</ConnectedNoteIDs>
+            <PointsToNoteIDs>46</PointsToNoteIDs>
+        </Note>
+        <Note ID="44" FontSize="12.0" Position="813.0,283.0" Width="97.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>notWinCondition</String>
+            <ConnectedNoteIDs>35, 45</ConnectedNoteIDs>
+            <PointsToNoteIDs>45</PointsToNoteIDs>
+        </Note>
+        <Note ID="45" FontSize="12.0" Position="847.0,157.0" Width="105.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Cloud"></Border>
+            </Appearance>
+            <String>Alerts:
+Matched!
+Please Pick Again</String>
+            <ConnectedNoteIDs>19, 44</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+        <Note ID="46" FontSize="12.0" Position="997.0,62.0" Width="105.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1" Style="Cloud"></Border>
+            </Appearance>
+            <String>Alerts:
+Matched!
+You Win!
+Click Okay to Start
+Please Pick Again</String>
+            <ConnectedNoteIDs>19, 43</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>19, 21-24, 26-32, 34-35, 39-45</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="3AC87E28-9E9D-4652-8391-85B86E4DDC9A" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.561855 0.71062 0.779401</BorderColor>
+            <FillColor>0.702319 0.888276 0.974252</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="7D47B086-177A-421F-A16A-D80EDDE551BA" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.572684 0.758969 0.558154</BorderColor>
+            <FillColor>0.715855 0.948712 0.697692</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="662470C1-3702-4949-ADA7-AA35F19987C7" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.957566 0.766747 0.999616</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="766E5266-9F9E-48EB-99BB-EA5FC2506BA8" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.993495 0.701207 0.732587</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="3973F83B-9D97-490D-9F08-62A543B33DE7" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.798177 0.714184 0.522055</BorderColor>
+            <FillColor>0.997722 0.89273 0.652569</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="FD2D235C-F950-4C1C-8344-5A6C08D2C6C6" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="9D81615C-2C6D-43DE-9F9A-1A77321FE783" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999767 0.98837 0.949907</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+    </UISettings>
+    <PrintSettings PaperSize="611.999999,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>
