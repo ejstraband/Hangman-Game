@@ -21,7 +21,6 @@ var htmlcurrentUserWord = document.getElementById('currentUserWord');
 var htmlGuessesRemaining = document.getElementById('guessesRemaining');
 var htmlWrongGuessLetters = document.getElementById('wrongGuessLetters');
 
-
 // so many functions.... microservices, anyone? :-)
 
 // defines the word bank, picks the secret word, resets guesses, blanks user's current word
@@ -63,9 +62,15 @@ function entryValidator(currentGuess) {
 // checks to see if the currentGuess has been guessed before
 function newGuessCheck(currentGuess) {
 	console.log("checking the current guess " + currentGuess + " to see if it has been chosen before." )
-	if (((wrongGuessLetters.indexOf(currentGuess)) !== -1) || ((correctGuessLetters.indexOf(currentGuess)) !== -1)) {
-		var success = true;
+	if ((wrongGuessLetters.indexOf(currentGuess)) !== -1) {
+		var success = false;
 		return success;
+		} else if ((correctGuessLetters.indexOf(currentGuess)) !== -1) {
+			var success = false;
+			return success;
+		} else {
+			var success = true;
+			return success;
 		}
 	}
 
@@ -74,8 +79,8 @@ function guessChecker(currentGuess) {
 	if (secretWord.match(currentGuess)) {
 		var success = true;
 		return success;
+		}
 	}
-}
 
 // actions for an incorrect guess
 function incorrectGuess(currentGuess) {
@@ -85,24 +90,37 @@ function incorrectGuess(currentGuess) {
 	guessesRemaining = (guessesRemaining - 1);
 	htmlWrongGuessLetters.innerHTML = wrongGuessLetters;
 	htmlGuessesRemaining.innerHTML = guessesRemaining
-	alert("This was not a match. Please choose again.")
-}
+	}
 
 // actions for a correct guess
 function correctGuess(currentGuess) {
 	console.log("this letter is a correct guess.");
 	correctGuessLetters.push(currentGuess);
+}
 
+function updateCurrentWord(currentGuess) {
+	for (var i = 0; i<secretWord.length; i++) {
+		if (secretWordArray[i]===currentGuess) {
+			currentUserWordArray[i]=currentGuess;
+			currentUserWord = currentUserWordArray.join("");
+			htmlcurrentUserWord.innerHTML = currentUserWord;
+			}
+		}
+	}
+
+function winChecker() {
 	if (currentUserWord === secretWord) {
 		wins = (wins + 1);
 		htmlWins.innerHTML = wins
 		alert("You Win!");
-
-	} else {
-		alert("This was a match. Please choose again.")		
+		}
 	}
 
-}
+function lose() {
+    losses = (losses + 1);
+	htmlLosses.innerHTML = losses
+	alert("You Lost!");
+	}
 
 // =================================
 //Matching Experiments
@@ -153,43 +171,39 @@ appSetup();
 // console.log(correctGuessLetters); 
 
 // main "loop"
-// capture the user guess
-document.onkeyup = function(currentGuess) {
-	currentGuess = currentGuess.key;
-	console.log(currentGuess + " is the current guess(1).");
+// capture the user guess into currentGuess
+document.onkeyup = function(currentKeypress) {
+	currentGuess = currentKeypress.key;
+	console.log(currentGuess + " is the current guess.");
 
 	// Function 1 validate the choice is a-z
 	if (entryValidator(currentGuess)) {
-		console.log("valid entry");
+		console.log(currentGuess + " is a valid entry.");
 
-		// function 2 validate original guess
+		// Function 2 validates the choice is new
 		if (newGuessCheck(currentGuess)) {
-			alert("This letter has already been guessed. Please try again");
+			console.log(currentGuess + " is a new choice.");			
+	
+			// function 3 validates that the guess is in the secret word
+			if (guessChecker(currentGuess)) {
+				console.log(currentGuess + " is a match!");
+				updateCurrentWord(currentGuess);
 
-		// function 2 else condition
-		} else {
-			console.log("Checked " + currentGuess + ". This is a new guess.");
 
-			// function 3 parent condition
-
-			// function 3 loop
-			for (var i = 0; i<secretWord.length; i++) {
-				// function 3 matcher
-				if(secretWord[i]===currentGuess) {
-					currentUserWordArray[i]=currentGuess;
-					currentUserWord = secretWordArray.join("");
-					htmlcurrentUserWord.innerHTML = currentUserWord;
-					alert("Good Match. Please pick again.");
-				// function 3 else condition
-				} else {
+			// function 3 else condition (third-to-last condition in program)
+			} else {
 				incorrectGuess(currentGuess);
-				}
 			}
 
-		}
+		// Function 2 else condition (second-to-last condition in program)
+		} else {
+			alert("This letter was already guessed. Please choose again.");			
+		} 	
 
-	// Function 1 else condition
+	// Function 1 else condition (last condition in program)
 	} else {
 		alert("Invalid Entry. Please try again.");
-	}
+		}
+	//end of program
 }
+

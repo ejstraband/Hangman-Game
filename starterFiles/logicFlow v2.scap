@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ScappleDocument Version="1.1" ID="00997F15-8BEA-4850-9BFF-1706F5A206F0">
     <Notes>
-        <Note ID="19" FontSize="12.0" Position="586.0,137.0" Width="129.0">
+        <Note ID="19" FontSize="12.0" Position="585.497206,139.431233" Width="129.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="5" Style="Jagged"></Border>
@@ -75,7 +75,7 @@ newGuessCheck</String>
             <ConnectedNoteIDs>26, 31</ConnectedNoteIDs>
             <PointsToNoteIDs>31</PointsToNoteIDs>
         </Note>
-        <Note ID="29" FontSize="12.0" Position="371.511719,149.09375" Width="134.0">
+        <Note ID="29" FontSize="12.0" Position="372.0,149.0" Width="134.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Cloud"></Border>
