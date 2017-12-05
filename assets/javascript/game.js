@@ -115,6 +115,12 @@ function winChecker() {
 		}
 	}
 
+function loseChecker() {
+	if (guessesRemaining === 0) {
+		return true;
+		}
+	}
+
 function win() {
 	wins = (wins + 1);
 	htmlWins.innerHTML = wins
@@ -125,42 +131,9 @@ function win() {
 function lose() {
     losses = (losses + 1);
 	htmlLosses.innerHTML = losses
-	alert("You Lost!");
+	alert("You Lose!");
 	appSetup();
 	}
-
-// =================================
-//Matching Experiments
-// =================================
-
-// find instances of a letter in the secret word and copy indicies into a variable
-// for(var i=0; i<secretWord.length;i++) {if (secretWord[i] === currentGuess) secretIndices.push(i);}
-
-// make a secret word long dash word
-// for (var i = 0; i < secretWord.length; i++) { (currentUserWord = currentUserWord + "-") ; }
-
-// write currentGuess into secretIndices[index] locations in currentUserWord
-// for (var i = 0; i < secretIndicies.length; i++) {
-// currentUserWord[i] = secretIndicies[i].push(currentGuess);
-
-// enter currentGuess into the currentUserWord[] at the correct index
-// for (var i=0; i<secretIndices.length; i++) { currentUserWordArray.splice(i, 0, currentGuess);
-
-
-// matching loop for guesses
-
-// for (var i = 0; i<secretWord.length; i++) {
-// 	if(secretWord[i]===currentGuess) {
-// 		currentUserWordArray[i]=currentGuess;
-// 		currentUserWord = secretWordArray.join("");
-//      htmlcurrentUserWord.innerHTML = currentUserWord;
-// 	}
-// };
-
-// =================================
-//Matching Experiments
-// =================================
-
 
 //------------
 // main application logic
@@ -169,13 +142,6 @@ function lose() {
 // sets default for the page load
 appSetup();
 
-// debugging == force fail options == debugging
-// wrongGuessLetters = ["a"];
-// correctGuessLetters = ["b"];
-
-// debugging == console logs to display proper reset on win/loss == debugging
-// console.log(wrongGuessLetters);
-// console.log(correctGuessLetters); 
 
 // main "loop"
 // capture the user guess into currentGuess
@@ -200,12 +166,19 @@ document.onkeyup = function(currentKeypress) {
 				if (winChecker()) {
 					win();
 				} else {
-					alert("Letter Matched. Please guess again.")
+					// alert("Letter Matched. Please guess again.");
 				}
 
 			// function 3 else condition (third-to-last condition in program)
 			} else {
 				incorrectGuess(currentGuess);
+				
+				// function 5: Check for a lose condition
+				if (loseChecker()) {
+					lose();
+				} else {
+					// alert("Please guess again.");
+				}
 			}
 
 		// Function 2 else condition (second-to-last condition in program)

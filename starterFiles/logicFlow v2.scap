@@ -106,7 +106,7 @@ guessChecker</String>
             <ConnectedNoteIDs>28, 32, 34</ConnectedNoteIDs>
             <PointsToNoteIDs>32, 34</PointsToNoteIDs>
         </Note>
-        <Note ID="32" FontSize="12.0" Position="210.0,263.0" Width="34.0">
+        <Note ID="32" FontSize="12.0" Position="260.059658,327.40214" Width="34.0">
             <Appearance>
                 <Alignment>Left</Alignment>
             </Appearance>
@@ -114,15 +114,15 @@ guessChecker</String>
             <ConnectedNoteIDs>31, 33</ConnectedNoteIDs>
             <PointsToNoteIDs>33</PointsToNoteIDs>
         </Note>
-        <Note ID="33" FontSize="12.0" Position="78.0,113.0" Width="119.0">
+        <Note ID="33" FontSize="12.0" Position="83.50139,207.199341" Width="119.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1"></Border>
             </Appearance>
             <String>Function:
 incorrectGuess</String>
-            <ConnectedNoteIDs>32, 41-42</ConnectedNoteIDs>
-            <PointsToNoteIDs>41-42</PointsToNoteIDs>
+            <ConnectedNoteIDs>32, 48</ConnectedNoteIDs>
+            <PointsToNoteIDs>48</PointsToNoteIDs>
         </Note>
         <Note ID="34" FontSize="12.0" Position="464.0,468.0" Width="33.0">
             <Appearance>
@@ -139,10 +139,10 @@ incorrectGuess</String>
             </Appearance>
             <String>function:
 correctGuess</String>
-            <ConnectedNoteIDs>34, 43-44</ConnectedNoteIDs>
-            <PointsToNoteIDs>43-44</PointsToNoteIDs>
+            <ConnectedNoteIDs>34, 47</ConnectedNoteIDs>
+            <PointsToNoteIDs>47</PointsToNoteIDs>
         </Note>
-        <Note ID="39" FontSize="12.0" Position="353.0,23.0" Width="105.0">
+        <Note ID="39" FontSize="12.0" Position="372.347551,83.395693" Width="105.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Cloud"></Border>
@@ -153,7 +153,7 @@ Please Pick Again</String>
             <ConnectedNoteIDs>19, 42</ConnectedNoteIDs>
             <PointsToNoteIDs>19</PointsToNoteIDs>
         </Note>
-        <Note ID="40" FontSize="12.0" Position="370.0,96.0" Width="58.0">
+        <Note ID="40" FontSize="12.0" Position="379.290673,27.412628" Width="58.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="1" Style="Cloud"></Border>
@@ -163,28 +163,28 @@ You Lose</String>
             <ConnectedNoteIDs>19, 41</ConnectedNoteIDs>
             <PointsToNoteIDs>19</PointsToNoteIDs>
         </Note>
-        <Note ID="41" FontSize="12.0" Position="233.0,117.0" Width="85.0">
+        <Note ID="41" FontSize="12.0" Position="233.139473,35.812385" Width="85.0">
             <Appearance>
                 <Alignment>Left</Alignment>
             </Appearance>
             <String>LoseCondition</String>
-            <ConnectedNoteIDs>33, 40</ConnectedNoteIDs>
+            <ConnectedNoteIDs>40, 48</ConnectedNoteIDs>
             <PointsToNoteIDs>40</PointsToNoteIDs>
         </Note>
-        <Note ID="42" FontSize="12.0" Position="220.0,45.0" Width="102.0">
+        <Note ID="42" FontSize="12.0" Position="231.082105,109.812268" Width="102.0">
             <Appearance>
                 <Alignment>Left</Alignment>
             </Appearance>
             <String>notLoseCondition</String>
-            <ConnectedNoteIDs>33, 39</ConnectedNoteIDs>
+            <ConnectedNoteIDs>39, 48</ConnectedNoteIDs>
             <PointsToNoteIDs>39</PointsToNoteIDs>
         </Note>
-        <Note ID="43" FontSize="12.0" Position="817.0,455.0" Width="77.0">
+        <Note ID="43" FontSize="12.0" Position="955.243349,294.786971" Width="77.0">
             <Appearance>
                 <Alignment>Left</Alignment>
             </Appearance>
             <String>winCondition</String>
-            <ConnectedNoteIDs>35, 46</ConnectedNoteIDs>
+            <ConnectedNoteIDs>46-47</ConnectedNoteIDs>
             <PointsToNoteIDs>46</PointsToNoteIDs>
         </Note>
         <Note ID="44" FontSize="12.0" Position="813.0,283.0" Width="97.0">
@@ -192,7 +192,7 @@ You Lose</String>
                 <Alignment>Left</Alignment>
             </Appearance>
             <String>notWinCondition</String>
-            <ConnectedNoteIDs>35, 45</ConnectedNoteIDs>
+            <ConnectedNoteIDs>45, 47</ConnectedNoteIDs>
             <PointsToNoteIDs>45</PointsToNoteIDs>
         </Note>
         <Note ID="45" FontSize="12.0" Position="847.0,157.0" Width="105.0">
@@ -219,9 +219,29 @@ Please Pick Again</String>
             <ConnectedNoteIDs>19, 43</ConnectedNoteIDs>
             <PointsToNoteIDs>19</PointsToNoteIDs>
         </Note>
+        <Note ID="47" FontSize="12.0" Position="827.117446,398.892855" Width="71.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>function:
+winChecker</String>
+            <ConnectedNoteIDs>35, 43-44</ConnectedNoteIDs>
+            <PointsToNoteIDs>43-44</PointsToNoteIDs>
+        </Note>
+        <Note ID="48" FontSize="12.0" Position="90.631029,88.562566" Width="109.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>function:
+loseChecker</String>
+            <ConnectedNoteIDs>33, 41-42</ConnectedNoteIDs>
+            <PointsToNoteIDs>41-42</PointsToNoteIDs>
+        </Note>
     </Notes>
     <BackgroundShapes></BackgroundShapes>
-    <AutoFit>19, 21-24, 26-32, 34-35, 39-45</AutoFit>
+    <AutoFit>19, 21-24, 26-32, 34-35, 39-45, 47</AutoFit>
     <NoteStyles>
         <Style Name="Bubble (Blue)" ID="3AC87E28-9E9D-4652-8391-85B86E4DDC9A" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
             <BorderThickness>1</BorderThickness>
