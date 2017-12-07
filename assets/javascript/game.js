@@ -4,7 +4,9 @@
 // variables for the javascript.
 var secretWord = "";
 var secretWordArray = [];
-var secretIndices = [];
+// var secretIndices = [];
+var winningImage = "";
+var secretImage = ".jpeg";
 var wrongGuessLetters = [];
 var correctGuessLetters = [];
 var currentUserWord = "";
@@ -20,6 +22,7 @@ var htmlLosses = document.getElementById('losses');
 var htmlcurrentUserWord = document.getElementById('currentUserWord');
 var htmlGuessesRemaining = document.getElementById('guessesRemaining');
 var htmlWrongGuessLetters = document.getElementById('wrongGuessLetters');
+var htmlWinningImage = document.getElementById('guessImg');
 
 // so many functions.... microservices, anyone? :-)
 
@@ -29,6 +32,8 @@ function appSetup() {
 	console.log("There are " + wordBank.length + " words in the bank.");
 	secretWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 	console.log("The secret word is " + secretWord);
+	winningImage = secretWord + ".jpeg";
+	console.log("The secret image is " + winningImage);
 	guessesRemaining = 13;
 	console.log("Reset of GuessesRemaining (should be 13): " + guessesRemaining);
 	wrongGuessLetters = [];
@@ -40,14 +45,14 @@ function appSetup() {
 	console.log("Blanking out last round's correct guesses  and word.")
 	
 	// make a secret word long dash word
-	for (var i = 0; i < secretWord.length; i++) { (currentUserWord = currentUserWord + "-") ; }
+	for (var i = 0; i < secretWord.length; i++) { (currentUserWord = currentUserWord + "_") ; }
     htmlcurrentUserWord.innerHTML = currentUserWord;
 	
 	currentUserWordArray = currentUserWord.split("");
 	//populating the secret word array
 	secretWordArray = secretWord.split("");
 
-	alert("Let's Get Started! Push a key to start guessing.");
+	// alert("Let's Get Started! Push a key to start guessing.");
 	}
 
 // validates the entry is a - z
@@ -122,9 +127,10 @@ function loseChecker() {
 	}
 
 function win() {
+	updateWinImage(winningImage);
 	wins = (wins + 1);
 	htmlWins.innerHTML = wins
-	alert("You Win!");
+	// alert("You Win!");
 	appSetup();
 	}
 
@@ -134,6 +140,11 @@ function lose() {
 	alert("You Lose!");
 	appSetup();
 	}
+
+function updateWinImage(winningImage) {
+	htmlWinningImage.src = "assets/images/" + winningImage;
+}
+
 
 //------------
 // main application logic
@@ -192,4 +203,3 @@ document.onkeyup = function(currentKeypress) {
 		}
 	//end of program
 }
-

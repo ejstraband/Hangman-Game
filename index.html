@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,17 +10,27 @@
 </head>
 <body>
 
-	<h1>Welcome to Hangman</h1>
+<div id=scorePanel>
+	<h1>Welcome to Hangman, Partner</h1>
 
 	<hr>
 
 	<h2>Press Any Key To Get Started!</h2>
+
+	<hr>
 
 	<h2>Wins:</h2>
 	<h2 id="wins">0</h2>
 
 	<h2>Losses:</h2>
 	<h2 id="losses">0</h2>
+</div>
+
+<div id=guessPanel>
+	
+	<div>
+	<img id="guessImg" src="assets/images/guess.jpeg">
+	</div>
 
 	<h2>Current Word:</h2>
 	<h2 id="currentUserWord">_</h2>
@@ -29,7 +40,12 @@
 
 	<h2>Wrong Guesses:</h2>
 	<h2 id="wrongGuessLetters">_</h2>
-
+</div>
 	<script src="assets/javascript/game.js"></script>
 </body>
+
+<div>
+	
+</div>
+
 </html>

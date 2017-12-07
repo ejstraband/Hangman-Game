@@ -1,0 +1,24 @@
+body {
+	/*background-color: brown;*/
+	background-image: url("../images/monument-valley.jpeg");
+	background-size: 100%;
+	background-repeat: no-repeat; 
+	padding: 30px;
+}
+
+#guessImg {
+	width: 90%;
+}
+
+#scorePanel {
+	background-color: brown;
+	padding: 20px;
+	width: 40%;
+}
+
+#guessPanel {
+	background-color: brown;
+	margin: 40px;
+	padding: 20px;
+	width: 40%
+}
