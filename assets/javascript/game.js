@@ -2,8 +2,11 @@
 // this is a comment from the mac. 11:00 AM:
 
 // variables for the javascript.
+var wordBank = ["saloon", "poker", "amigos", "cactus", "mesas","gunfight", "locomotive", "eastwood", "westworld", "tombstone", "noose", "ranch", "stagecoach", "wanted"];
 var secretWord = "";
 var secretWordArray = [];
+var secretWordCounter = -1;
+// killed this when we came up with a better "filler function"
 // var secretIndices = [];
 var winningImage = "";
 var secretImage = ".jpeg";
@@ -29,9 +32,11 @@ var htmlLastCorrectWord = document.getElementById('lastCorrectWord');
 
 // defines the word bank, picks the secret word, resets guesses, blanks user's current word
 function appSetup() {
-	var wordBank = ["amigos", "cactus", "eastwood", "gunfight", "locomotive", "mesas", "noose", "poker", "ranch", "saloon", "stagecoach", "tombstone", "wanted", "westworld"];
 	console.log("There are " + wordBank.length + " words in the bank.");
-	secretWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+	secretWordCounter = (secretWordCounter + 1);
+	secretWordPicker(secretWordCounter);
+	// random picker. Changed to an iterative approach to avoid duplicates
+	// secretWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 	console.log("The secret word is " + secretWord);
 	winningImage = secretWord + ".jpeg";
 	console.log("The secret image is " + winningImage);
@@ -55,6 +60,16 @@ function appSetup() {
 	secretWordArray = secretWord.split("");
 
 	// alert("Let's Get Started! Push a key to start guessing.");
+	}
+
+function secretWordPicker(secretWordCounter) {
+	if (secretWordCounter <= (wordBank.length - 1)) {
+		secretWord = wordBank[secretWordCounter];
+	} 
+	else {
+		secretWordCounter = 0;
+		secretWord = wordBank[secretWordCounter];
+		}
 	}
 
 // validates the entry is a - z with a regex
