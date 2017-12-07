@@ -12,6 +12,7 @@ var correctGuessLetters = [];
 var currentUserWord = "";
 var currentUserWordArray = [];
 var currentGuess = null;
+var lastCorrectWord = "";
 var guessesRemaining = 0;
 var wins = 0;
 var losses = 0;
@@ -23,7 +24,7 @@ var htmlcurrentUserWord = document.getElementById('currentUserWord');
 var htmlGuessesRemaining = document.getElementById('guessesRemaining');
 var htmlWrongGuessLetters = document.getElementById('wrongGuessLetters');
 var htmlWinningImage = document.getElementById('guessImg');
-
+var htmlLastCorrectWord = document.getElementById('lastCorrectWord');
 // so many functions.... microservices, anyone? :-)
 
 // defines the word bank, picks the secret word, resets guesses, blanks user's current word
@@ -132,6 +133,7 @@ function win() {
 	var audio = new Audio('assets/sounds/yeehaw.wav')
 	audio.play();
 	wins = (wins + 1);
+	htmlLastCorrectWord.innerHTML = secretWord;
 	htmlWins.innerHTML = wins
 
 	// alert("You Win!");
