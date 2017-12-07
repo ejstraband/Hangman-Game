@@ -35,7 +35,8 @@ function appSetup() {
 	winningImage = secretWord + ".jpeg";
 	console.log("The secret image is " + winningImage);
 	guessesRemaining = 13;
-	console.log("Reset of GuessesRemaining (should be 13): " + guessesRemaining);
+	htmlGuessesRemaining.innerHTML = guessesRemaining;
+	console.log("Reset of guessesRemaining (should be 13): " + guessesRemaining);
 	wrongGuessLetters = [];
 	console.log("Blanking out last round's wrong guesses array.")
     htmlWrongGuessLetters.innerHTML = wrongGuessLetters;
@@ -95,7 +96,7 @@ function incorrectGuess(currentGuess) {
 	wrongGuessLetters.sort();
 	guessesRemaining = (guessesRemaining - 1);
 	htmlWrongGuessLetters.innerHTML = wrongGuessLetters;
-	htmlGuessesRemaining.innerHTML = guessesRemaining
+	htmlGuessesRemaining.innerHTML = guessesRemaining;
 	}
 
 // actions for a correct guess
@@ -128,8 +129,11 @@ function loseChecker() {
 
 function win() {
 	updateWinImage(winningImage);
+	var audio = new Audio('assets/sounds/yeehaw.wav')
+	audio.play();
 	wins = (wins + 1);
 	htmlWins.innerHTML = wins
+
 	// alert("You Win!");
 	appSetup();
 	}
@@ -144,6 +148,8 @@ function lose() {
 function updateWinImage(winningImage) {
 	htmlWinningImage.src = "assets/images/" + winningImage;
 }
+
+// function winSound();
 
 
 //------------

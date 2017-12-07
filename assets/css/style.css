@@ -13,12 +13,19 @@ body {
 #scorePanel {
 	background-color: brown;
 	padding: 20px;
-	width: 40%;
+	width: 30%;
+	float: left;
 }
 
 #guessPanel {
 	background-color: brown;
-	margin: 40px;
+
 	padding: 20px;
-	width: 40%
+	width: 40%;
+	float: right;
+}
+
+#currentUserWord {
+	letter-spacing: 4px;
+	size: 14px;
 }
