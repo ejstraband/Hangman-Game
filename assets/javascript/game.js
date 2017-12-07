@@ -57,7 +57,8 @@ function appSetup() {
 	// alert("Let's Get Started! Push a key to start guessing.");
 	}
 
-// validates the entry is a - z
+// validates the entry is a - z with a regex
+// this solution is pulling in enter/shift/meta with the on key event. Switching methods.
 function entryValidator(currentGuess) {
 	// reference: https://www.w3schools.com/jsref/jsref_regexp_test.asp
 	// pattern reference: https://stackoverflow.com/questions/388996/regex-for-javascript-to-allow-only-alphanumeric 
@@ -66,6 +67,16 @@ function entryValidator(currentGuess) {
 	console.log(success);
 	return success;
 	}
+
+// validator by array method
+// less elegant, but it works. :-)
+function entryValidator2(currentGuess) {
+	var validLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q" , "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+	if (validLetters.indexOf(currentGuess) !== -1) {
+	return true;
+	}
+
+}
 
 // checks to see if the currentGuess has been guessed before
 function newGuessCheck(currentGuess) {
@@ -166,10 +177,11 @@ appSetup();
 // capture the user guess into currentGuess
 document.onkeyup = function(currentKeypress) {
 	currentGuess = currentKeypress.key;
+	currentGuess = currentGuess.toLowerCase();
 	console.log(currentGuess + " is the current guess.");
 
 	// Function 1 validate the choice is a-z
-	if (entryValidator(currentGuess)) {
+	if (entryValidator2(currentGuess)) {
 		console.log(currentGuess + " is a valid entry.");
 
 		// Function 2 validates the choice is new
@@ -202,7 +214,7 @@ document.onkeyup = function(currentKeypress) {
 
 		// Function 2 else condition (second-to-last condition in program)
 		} else {
-			alert("This letter was already guessed. Please choose again.");			
+			// alert("This letter was already guessed. Please choose again.");			
 		} 	
 
 	// Function 1 else condition (last condition in program)
